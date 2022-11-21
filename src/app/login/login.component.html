@@ -1,0 +1,55 @@
+
+
+<!--
+<div class="card-container">
+    <div class=""> 
+      <div class="card-body">
+    
+    
+        <form [formGroup]="loginForm">
+         
+          <div class="form-group mb-2">
+            <label class="label-control">Email</label>
+            <input type="email" formControlName="email"  name="email"class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password"  formControlName="password" name ="password" class="form-control">
+          </div>
+          <div *ngIf="!is_success" class="text-danger"> {{error}}</div>
+    
+        <br>
+          <div class="form-group">
+            <button class="btn btn-danger btn-block col-md-12" (click)="Login();">Submit</button>
+          </div>
+    
+        </form>
+        <br>
+      </div>
+      </div>
+      </div>
+      -->
+     
+      <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+            <form #loginForm="ngForm" >
+                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                <div class="form-floating mb-1">
+                <input type="email" class="form-control"name="email" [(ngModel)]="model.email"    placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-1">
+                <input type="password" class="form-control"name ="password" [(ngModel)]="model.password"   placeholder="Password">
+                <label for="floatingPassword">Password</label>
+                </div>
+                <div *ngIf="!is_success" class="text-danger font-weight-bold"> {{error}}</div>
+
+                <button class="w-100 btn btn-lg btn-primary mt-4"(click)="login();">Sign in</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
